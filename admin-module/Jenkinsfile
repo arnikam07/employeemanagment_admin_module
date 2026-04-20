@@ -2,16 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                echo 'Cloning code...'
-            }
-        }
-
         stage('Build') {
             steps {
                 dir('admin-module') {
-                    sh 'mvn clean compile'
+                    bat 'mvn clean compile'
                 }
             }
         }
@@ -19,7 +13,7 @@ pipeline {
         stage('Test') {
             steps {
                 dir('admin-module') {
-                    sh 'mvn test'
+                    bat 'mvn test'
                 }
             }
         }
