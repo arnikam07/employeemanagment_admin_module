@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 dir('admin-module') {
-                    bat 'mvn clean compile'
+                    bat 'mvnw.cmd clean compile'
                 }
             }
         }
@@ -13,7 +13,7 @@ pipeline {
         stage('Test') {
             steps {
                 dir('admin-module') {
-                    bat 'mvn test'
+                    bat 'mvnw.cmd test'
                 }
             }
         }
