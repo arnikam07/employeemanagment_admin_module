@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Cloning code...'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                dir('admin-module') {
+                    sh 'mvn clean compile'
+                }
+            }
+        }
+
+        stage('Test') {
+            steps {
+                dir('admin-module') {
+                    sh 'mvn test'
+                }
+            }
+        }
+    }
+}
