@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 dir('admin-module') {
-                    bat '"C:\\apache-maven-3.9.15\\bin\\mvn.cmd" clean compile'
+                    bat '"C:\\apache-maven\\apache-maven-3.9.15\\bin\\mvn.cmd" clean compile'
                 }
             }
         }
@@ -13,7 +13,7 @@ pipeline {
         stage('Test') {
             steps {
                 dir('admin-module') {
-                    bat '"C:\\apache-maven-3.9.15\\bin\\mvn.cmd" test'
+                    bat '"C:\\apache-maven\\apache-maven-3.9.15\\bin\\mvn.cmd" test'
                 }
             }
         }
