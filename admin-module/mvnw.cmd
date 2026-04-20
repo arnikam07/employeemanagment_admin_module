@@ -1,0 +1,6 @@
+@ECHO OFF
+SET MAVEN_PROJECTBASEDIR=%~dp0
+SET MAVEN_HOME=%MAVEN_PROJECTBASEDIR%\.mvn\wrapper
+SET JAVA_EXE=java
+
+"%JAVA_EXE%" -jar "%MAVEN_HOME%\maven-wrapper.jar" %*
